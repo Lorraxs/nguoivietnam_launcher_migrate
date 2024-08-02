@@ -7,6 +7,7 @@ import {
   useService,
 } from '../../../utils/servicesContainer';
 import {EventsService} from '../../events/events.service';
+import {makeAutoObservable} from 'mobx';
 
 export type IMainService = MainService;
 export const IMainService = defineService<IMainService>('MainService');
@@ -33,6 +34,10 @@ class MainService implements AppContribution {
 
   setShow(show: boolean) {
     this.show = show;
+  }
+
+  constructor() {
+    makeAutoObservable(this);
   }
 }
 

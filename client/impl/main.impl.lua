@@ -14,6 +14,10 @@ function Impl:Init()
     self.promise = nil
     return result
   end)
+  RegisterCommand("testtt", function()
+    print("z")
+    self:ShowUI()
+  end, false)
 end
 
 function Impl:NUIHandlers()
