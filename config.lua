@@ -9,21 +9,17 @@ Config.Settings = {
 
 --Dont touch this
 Config.EnableModules = {
-  ["Newbie"] = {
+  ["Main"] = {
     enabled = true,
     client = true, -- enable client side
     priority = 1,  -- 1 : init on start | 2 : init on player loaded
-  },
-  ["Test"] = {
-    enabled = true,
-    priority = 2, -- 1 : init on start | 2 : init on player loaded
   },
 }
 Config.Debug = true
 Config.Nui = false
 Config.Dev = false
 ---@type "qb" | "esx" | "ProjectStarboy" | "standalone"
-Config.Framework = "standalone" -- "qb" | "esx" | "custom"
+Config.Framework = "esx" -- "qb" | "esx" | "custom"
 Config.ClientLazyLoad = false
 
 function L(key, ...)

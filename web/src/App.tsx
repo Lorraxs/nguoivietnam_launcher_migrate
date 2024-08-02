@@ -6,6 +6,8 @@ import {DefaultUISetting, ISettingContext, UISetting} from './types';
 import stringd from 'stringd';
 import {observer} from 'mobx-react-lite';
 import {useMainService} from './services/app/main/main.service';
+import Title from './components/Title';
+import Main from './components/Main';
 
 export const SettingContext = createContext<ISettingContext>(DefaultUISetting);
 
@@ -44,12 +46,15 @@ const App = observer(() => {
           top={0}
           left={0}
           display="flex"
+          flexDirection="column"
+          rGap={20}
           justifyContent="center"
           alignItems="center"
           className="prose"
           pointerEvents="none"
         >
-          APPS
+          <Title />
+          <Main />
         </Box>
       )}
     </SettingContext.Provider>
